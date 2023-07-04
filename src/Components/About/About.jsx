@@ -19,6 +19,22 @@ const About = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, aspernatur?
             </p>
           </div>
+          <div className="singleItem">
+            <img src={aboutImage1} alt="Image Name" />
+            <h3>100+ Mountains</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, aspernatur?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, aspernatur?
+            </p>
+          </div>
+          <div className="singleItem">
+            <img src={aboutImage1} alt="Image Name" />
+            <h3>100+ Mountains</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, aspernatur?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, aspernatur?
+            </p>
+          </div>
         </div>
         <div className="videoCard container">
           <div className="cardContent grid">

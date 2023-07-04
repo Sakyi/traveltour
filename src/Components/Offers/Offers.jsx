@@ -3,7 +3,7 @@ import './offers.css'
 import {MdAirportShuttle, MdBathtub, MdKingBed, MdLocationOn} from 'react-icons/md'
 import {FaWifi} from 'react-icons/fa'
 import { BsArrowRightShort } from 'react-icons/bs'
-import image from '../../assets/image (6).jpg'
+import { OffersData } from './offersdata'
 
 const Offers = () => {
   return (
@@ -21,51 +21,55 @@ const Offers = () => {
         </div>
 
         <div className="mainContent grid">
-          <div className="singleOffer">
-            <div className='destImage'>
-              <img src={image} alt='Image Name'/>
-              <span className='discount'>
-                30% Off
-              </span>
-            </div>
-
-            <div className="offerBody">
-              <div className="price flex">
-                <h4>
-                  $1000
-                </h4>
-                <span className="status">
-                  For Rent
+          {OffersData.map((item,key) => {
+            return (
+              <div className="singleOffer">
+              <div className='destImage'>
+                <img src={item.img} alt='Image Name'/>
+                <span className='discount'>
+                 {item.discount} discount
                 </span>
               </div>
-
-              <div className="amenities flex">
-                <div className="singleAmenity flex">
-                  <MdKingBed className="icon"/>
-                  <small>2 Beds</small>
+  
+              <div className="offerBody">
+                <div className="price flex">
+                  <h4>
+                    ${item.price}
+                  </h4>
+                  <span className="status">
+                    {item.renting === 'yes' ? 'For Rent' : 'Rented Out'}
+                  </span>
                 </div>
-                <div className="singleAmenity flex">
-                  <MdBathtub className="icon"/>
-                  <small>1 Bath</small>
+  
+                <div className="amenities flex">
+                  <div className="singleAmenity flex">
+                    <MdKingBed className="icon"/>
+                    <small>{item.beds} beds</small>
+                  </div>
+                  <div className="singleAmenity flex">
+                    <MdBathtub className="icon"/>
+                    <small>{item.bath} baths</small>
+                  </div>
+                  <div className="singleAmenity flex">
+                    <FaWifi className="icon"/>
+                    <small>{item.wifi === 'yes' ? 'Wifi' : 'No Wifi' }</small>
+                  </div>
+                  <div className="singleAmenity flex">
+                    <MdAirportShuttle className="icon"/>
+                    <small>{item.shuttle === 'yes' ? 'shuttle': 'No shuttle'}</small>
+                  </div>
                 </div>
-                <div className="singleAmenity flex">
-                  <FaWifi className="icon"/>
-                  <small>Wi-Fi</small>
+  
+                <div className="location flex">
+                  <MdLocationOn className='icon'/>
+                  <small>{item.location}</small>
                 </div>
-                <div className="singleAmenity flex">
-                  <MdAirportShuttle className="icon"/>
-                  <small>Shuttle</small>
-                </div>
+                <button className='btn flex'>View Details<BsArrowRightShort className='icon'/> </button>
               </div>
-
-              <div className="location flex">
-                <MdLocationOn className='icon'/>
-                <small>450 Vime #310, London</small>
-              </div>
-              <button className='btn flex'>View Details<BsArrowRightShort className='icon'/> </button>
+  
             </div>
-
-          </div>
+            )
+          })}
         </div>
 
       </div>

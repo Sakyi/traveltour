@@ -117,7 +117,7 @@
 }
 @media screen and (min-width: 720px) {
   .home .secContainer .homeCard {
-    bottom: -20%;
+    bottom: -10%;
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -131,6 +131,14 @@
     line-height: 4rem;
   }
   .home .secContainer .homeText .subTitle {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .home .secContainer .homeText .subTitle {
+    font-size: 20px;
+  }
+  .home .secContainer .homeCard {
     width: 70%;
   }
 }/*# sourceMappingURL=home.css.map */

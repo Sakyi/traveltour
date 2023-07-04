@@ -1,7 +1,7 @@
 import React from 'react'
 import './blog.css'
 import { BsArrowRightShort } from 'react-icons/bs'
-import img from '../../assets/image (9).jpg'
+import { BlogData } from './blogdata'
 
 const Blog = () => {
   return (
@@ -17,22 +17,27 @@ const Blog = () => {
             </div>
 
             <div className="mainContainer grid">
-              <div className="singlePost grid">
-                <div className="imgDiv">
-                  <img src={img} alt="Image Name" />
+              
+                {BlogData.map((item,key)=> {
+                 return (
+                  <div className="singlePost grid">
+                  <div className="imgDiv">
+                    <img src={item.img} alt="ImgName" />
+                  </div>
+  
+                  <div className="postDetails">
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+  
+                  <a href="#" className='flex'>
+                    <BsArrowRightShort className="icon"/>
+                    Read More
+                  </a>
                 </div>
-
-                <div className="postDetails">
-                  <h3>Title</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Esse iure quos consectetur tempore, nesciunt animi.</p>
-                </div>
-
-                <a href="#" className='flex'>
-                  <BsArrowRightShort className="icon"/>
-                  Read More
-                </a>
-              </div>
+                        )
+                }
+                )}
             </div>
           </div>
     </section>
