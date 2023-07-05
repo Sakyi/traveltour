@@ -11,7 +11,7 @@ const About = () => {
           Why Hikings
         </h2>
         <div className="mainContent container grid">
-          <div className="singleItem">
+          <div data-aos="fade-up" data-aos-duration="2000" className="singleItem">
             <img src={aboutImage1} alt="Image Name" />
             <h3>100+ Mountains</h3>
             <p>
@@ -19,7 +19,7 @@ const About = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, aspernatur?
             </p>
           </div>
-          <div className="singleItem">
+          <div data-aos="fade-up" data-aos-duration="2500" className="singleItem">
             <img src={aboutImage1} alt="Image Name" />
             <h3>100+ Mountains</h3>
             <p>
@@ -27,7 +27,7 @@ const About = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, aspernatur?
             </p>
           </div>
-          <div className="singleItem">
+          <div data-aos="fade-up" data-aos-duration="3000" className="singleItem">
             <img src={aboutImage1} alt="Image Name" />
             <h3>100+ Mountains</h3>
             <p>
@@ -38,7 +38,7 @@ const About = () => {
         </div>
         <div className="videoCard container">
           <div className="cardContent grid">
-            <div className="cardText">
+            <div data-aos="fade-right" data-aos-duration="2000" className="cardText">
               <h2> Wonderful House Experience there</h2>
 
               <p>
@@ -46,7 +46,7 @@ const About = () => {
                 Pariatur perferendis sunt repudiandae dolore reiciendis nisi?
               </p>
             </div>
-            <div className="cardVideo">
+            <div data-aos="fade-left" data-aos-duration="2000" className="cardVideo">
               <video src={video3} autoPlay loop muted type="video/mp4">
                  
               </video>

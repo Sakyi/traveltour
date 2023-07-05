@@ -9,7 +9,7 @@ const Offers = () => {
   return (
     <section className='offer container section'>
       <div className="secContainer">
-        <div className="secIntro">
+        <div data-aos="fade-up" data-aos-duration="2000" className="secIntro">
           <h2 className="secTitle">
             Special Offers
           </h2>
@@ -23,7 +23,7 @@ const Offers = () => {
         <div className="mainContent grid">
           {OffersData.map((item,key) => {
             return (
-              <div className="singleOffer">
+              <div data-aos="fade-up" data-aos-duration="3000" className="singleOffer">
               <div className='destImage'>
                 <img src={item.img} alt='Image Name'/>
                 <span className='discount'>

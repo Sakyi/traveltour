@@ -13,7 +13,7 @@ const Popular = () => {
     <section className='popular section container'>
       <div className='secContainer'>
         <div className="secHeader flex">
-            <div className="textDiv">
+            <div data-aos="fade-right" data-aos-duration="2500" className="textDiv">
               <h2 className='secTitle'>
                 Popular Destination
               </h2>
@@ -22,7 +22,7 @@ const Popular = () => {
                 Come see the best of the world.
               </p>
             </div>
-            <div className='iconsDiv flex'>
+            <div data-aos="fade-left" data-aos-duration="2500" className='iconsDiv flex'>
                 <BsArrowLeftShort className='icon leftIcon'/>
                 <BsArrowRightShort className='icon'/>
             </div>
@@ -34,7 +34,7 @@ const Popular = () => {
         {
           PopularData.map((item, key) => {
             return (
-              <div className="singleDestination" key={key}>
+              <div data-aos="fade-up" className="singleDestination" key={key}>
               <div className="destImage">
 
                 <img src={item.image} alt="item"/>

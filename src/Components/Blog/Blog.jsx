@@ -20,17 +20,17 @@ const Blog = () => {
               
                 {BlogData.map((item,key)=> {
                  return (
-                  <div className="singlePost grid">
+                  <div data-aos="fade-up" data-aos-duration="2000" className="singlePost grid">
                   <div className="imgDiv">
                     <img src={item.img} alt="ImgName" />
                   </div>
   
                   <div className="postDetails">
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
+                    <h3 data-aos="fade-up" data-aos-duration="3000">{item.title}</h3>
+                    <p  data-aos="fade-up" data-aos-duration="4000">{item.description}</p>
                   </div>
   
-                  <a href="#" className='flex'>
+                  <a href="#" className='flex' data-aos="fade-up" data-aos-duration="4500">
                     <BsArrowRightShort className="icon"/>
                     Read More
                   </a>

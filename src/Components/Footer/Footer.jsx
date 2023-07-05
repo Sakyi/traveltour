@@ -7,15 +7,13 @@ import { AiFillInstagram } from 'react-icons/ai'
 const Footer = () => {
   return (
     <div className='footer'>
-      <div className="secContainer container grid">
+      <div data-aos="fade-up" data-aos-duration="2000" className="secContainer container grid">
         <div className='logoDiv'>
-
           <div className="footerLogo">
-            <a href="#" className="logo">
+            <a href="#" className="logo flex">
               <h1 className='flex'> <SiYourtraveldottv className='icon'/>ATAT</h1>
             </a>
           </div>
-
         <div className="socials flex">
           <ImFacebook className='icon'/>
           <BsTwitter className='icon' />
@@ -73,4 +71,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer`4`
